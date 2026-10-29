@@ -9,29 +9,42 @@ class Program
 
         int percentage = int.Parse(grade);
 
+        string letter = "";
+
         if (percentage >= 90)
         {
-            Console.WriteLine("Distinction!");
+            letter = "A";
         }
 
         else if (percentage >= 80)
         {
-            Console.WriteLine("Proficient!");
+            letter = "B";
         }
 
         else if (percentage >= 70)
         {
-            Console.WriteLine("Satisfactory!");
+            letter = "C";
+ 
         }
 
         else if (percentage >= 60)
         {
-            Console.WriteLine("Pass!");
+            letter = "D";
         }
 
-        else if (percentage < 60)
+        else 
         {
-            Console.WriteLine("Fail!");
+            letter = "F";
+        }
+
+        if (percentage >= 70)
+        {
+            Console.WriteLine("You passed!");
+        }
+
+        else
+        {
+            Console.WriteLine("Better luck next time.");
         }
     }
 }
