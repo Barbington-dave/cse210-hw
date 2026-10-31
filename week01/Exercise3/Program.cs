@@ -6,9 +6,11 @@ class Program
 
     {
 
-        Console.Write("What is the magic number? ");
-        int magicNumber = int.Parse(Console.ReadLine());
-
+        Random randomGenerator = new Random();
+        
+        
+        int magicNumber = randomGenerator.Next(1, 101);
+        int guessCount = 0;  
         
         int guess = -1;
 
@@ -16,6 +18,8 @@ class Program
         {
             Console.Write("What is your guess? ");
             guess = int.Parse(Console.ReadLine());
+
+            guessCount++;
 
             if (guess > magicNumber)
             {
@@ -28,6 +32,7 @@ class Program
             else
             {
                 Console.WriteLine("You guessed it!");
+                Console.WriteLine($"It took you {guessCount} guesses.");
             }
         }
     }
