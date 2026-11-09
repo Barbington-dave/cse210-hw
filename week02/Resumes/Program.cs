@@ -4,6 +4,6 @@ class Program
 {
     static void Main(string[] args)
     {
-       Console.WriteLine("Welcome to ");
+       Console.WriteLine("Welcome to Resume Program!");
     }
 }
